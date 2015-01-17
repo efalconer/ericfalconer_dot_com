@@ -1,0 +1,20 @@
+{# YOUR HOMEPAGE #}
+
+{# First time seeing extend or blocks? Want to know how it works? Tutorial here: http://www.webhook.com #}
+{% extends "templates/partials/base.html" %}
+
+{% block content %}
+  <div class="home-main">
+
+    {% include "templates/partials/header.html" %}
+
+    {{ about.bio|safe }}
+
+    <hr>
+    {% include "templates/partials/social.html" %}
+  </div>
+
+  <div class="home-img">
+    <img src="{{ about.photo.url }}">
+  </div>
+{% endblock %}
